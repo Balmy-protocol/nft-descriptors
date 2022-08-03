@@ -1,33 +1,25 @@
 {
-  "name": "hardhat-boilerplate",
+  "name": "nft-descriptors",
   "version": "0.0.0",
-  "description": "Hardhat boilerplate",
+  "description": "A repository that contains all of Mean's NFT Descriptors",
   "keywords": [
     "ethereum",
     "smart",
     "contracts",
-    "test",
+    "NFTs",
     "solidity",
     "hardhat",
-    "boilerplate"
+    "descriptor"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/defi-wonderland/hardhat-boilerplate-ts.git"
+    "url": "git+https://github.com/Mean-Finance/nft-descriptors.git"
   },
-  "license": "AGPL-3.0-only",
+  "license": "GPL-3.0",
   "contributors": [
     {
-      "name": "404skillz",
-      "url": "https://github.com/404skillz"
-    },
-    {
-      "name": "0xGorilla",
-      "url": "https://github.com/0xGorilla"
-    },
-    {
-      "name": "wei3erHase",
-      "url": "https://github.com/wei3erHase"
+      "name": "Sam Bugs",
+      "url": "https://github.com/0xsambugs"
     }
   ],
   "files": [
@@ -42,7 +34,7 @@
     "!**/.DS_Store"
   ],
   "scripts": {
-    "compile": "eth-sdk && hardhat compile",
+    "compile": "hardhat compile",
     "compile:test": "cross-env TEST=true hardhat compile",
     "coverage": "hardhat coverage",
     "deploy": "npx hardhat deploy",
@@ -77,6 +69,7 @@
     "eth-gas-reporter/colors": "1.4.0"
   },
   "dependencies": {
+    "@mean-finance/dca-v2-core": "2.2.0-rc1",
     "@openzeppelin/contracts": "4.7.2"
   },
   "devDependencies": {
@@ -128,8 +121,5 @@
     "tsconfig-paths": "4.0.0",
     "typechain": "8.1.0",
     "typescript": "4.7.4"
-  },
-  "engines": {
-    "node": "^18.0.0"
   }
 }
