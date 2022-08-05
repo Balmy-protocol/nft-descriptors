@@ -5,6 +5,7 @@ import 'hardhat-deploy';
 import { HardhatUserConfig, MultiSolcUserConfig, NetworksUserConfig } from 'hardhat/types';
 import * as env from './utils/env';
 import 'tsconfig-paths/register';
+import './tasks/npm-publish-clean-typechain';
 
 const networks: NetworksUserConfig =
   env.isHardhatCompile() || env.isHardhatClean() || env.isTesting()

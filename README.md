@@ -1,134 +1,35 @@
-# Hardhat Boilerplate
+[![Lint](https://github.com/Mean-Finance/nft-descriptors/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/Mean-Finance/nft-descriptors/actions/workflows/lint.yml)
+[![Tests](https://github.com/Mean-Finance/nft-descriptors/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/Mean-Finance/nft-descriptors/actions/workflows/tests.yml)
+[![Slither Analysis](https://github.com/Mean-Finance/nft-descriptors/actions/workflows/slither.yml/badge.svg?branch=main)](https://github.com/Mean-Finance/nft-descriptors/actions/workflows/slither.yml)
 
-## Why ?
+# Mean Finance NFT Descriptors
 
-Thought to have a fast way of bootstraping projects with best practice's in mind. Having linters, prettiers, standards on how to commit, and changelog creation & maintenance.
+This repository holds Mean's NFT Descriptors. These are contracts that will generate an SVG completely on-chain, to describe the current state of an NFT.
 
----
+## Package
 
-## How ?
+The package will contain:
 
-This is achieved using several hardhat plugins, and external known packages.
+- Artifacts can be found under `@mean-finance/nft-descriptors/artifacts`
+- Compatible deployments for [hardhat-deploy](https://github.com/wighawag/hardhat-deploy) plugin under the `@mean-finance/nft-descriptors/deployments` folder.
+- Typescript smart contract typings under `@mean-finance/nft-descriptors/typechained`
 
----
+## Documentation
 
-## Setup
+Everything that you need to know as a developer on how to use all repository smart contracts can be found in the [documented interfaces](./solidity/interfaces/).
 
-```bash
-# Install dependencies
-yarn install
-# Copy Env example file
-cp .env.example .env
+## Installation
+
+To install with [**Hardhat**](https://github.com/nomiclabs/hardhat) or [**Truffle**](https://github.com/trufflesuite/truffle):
+
+#### YARN
+
+```sh
+yarn add @mean-finance/nft-descriptors
 ```
 
-After installing dependencies and copying the example environment, you will have to update your `.env` file with
-at least you alchemy API KEY (`NODE_URI_ETHEREUM`).
-<br/>
-You can generate your API KEY in the [Alchemy site](https://www.alchemy.com).
+### NPM
 
----
-
-## Tools
-
-This boilerplate includes:
-
-- [Hardhat](https://hardhat.org/)
-- [Solhint](https://github.com/protofire/solhint)
-- [Prettier](https://github.com/prettier-solidity/prettier-plugin-solidity)
-- [Coverage](https://github.com/sc-forks/solidity-coverage)
-- [Gas reporter](https://github.com/cgewecke/hardhat-gas-reporter/tree/master)
-- [Commitlint](https://github.com/conventional-changelog/commitlint)
-- [Standard version](https://github.com/conventional-changelog/standard-version)
-- [Uniswap](https://github.com/Uniswap/uniswap-v2-periphery) + [Internal tooling](./test/utils/uniswap.ts)
-
----
-
-## Commands
-
-### **Coverage**
-
-```bash
-yarn coverage
+```sh
+npm install @mean-finance/nft-descriptors
 ```
-
-Runs solidity code coverage
-<br/>
-
-### **Fork**
-
-```bash
-yarn fork
-```
-
-Runs a mainnet fork via hardhat's node forking util.
-
-```bash
-yarn fork:script {path}
-```
-
-Runs the script in mainnet's fork.
-
-```
-yarn fork:test
-```
-
-Runs tests that should be run in mainnet's fork.
-<br/>
-
-### **Lint**
-
-```bash
-yarn lint:check
-```
-
-Runs solhint.
-<br/>
-
-### **Prettier (lint fix)**
-
-```bash
-yarn lint:fix
-```
-
-Runs prettier
-<br/>
-
-### **Release**
-
-```bash
-yarn release
-```
-
-Runs standard changelog, changes package.json version and modifies CHANGELOG.md accordingly.
-<br/>
-
-### **Test**
-
-```bash
-yarn test:all
-```
-
-Runs all solidity tests.
-<br/>
-
-```bash
-yarn test:unit
-```
-
-Runs all solidity tests in folder [unit](./test/unit)
-<br/>
-
-```bash
-yarn test:e2e
-```
-
-Runs all solidity tests in folder [e2e](./test/e2e)
-<br/>
-
-### **Gas report**
-
-```bash
-yarn test:gas
-```
-
-Runs all tests and report gas usage.

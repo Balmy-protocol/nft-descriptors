@@ -1,6 +1,6 @@
 {
-  "name": "nft-descriptors",
-  "version": "0.0.0",
+  "name": "@mean-finance/nft-descriptors",
+  "version": "1.0.0-rc3",
   "description": "A repository that contains all of Mean's NFT Descriptors",
   "keywords": [
     "ethereum",
@@ -23,13 +23,17 @@
     }
   ],
   "files": [
-    "solidity/contracts",
-    "solidity/interfaces",
+    "solidity",
+    "!solidity/contracts/test/**",
     "artifacts/solidity/**/*.json",
+    "!artifacts/solidity/contracts/test/**",
     "!artifacts/solidity/**/**/*.dbg.json",
     "typechained",
+    "!typechained/**/*test*",
+    "!typechained/**/*Mock*",
     "deployments",
     "!deployments/localhost",
+    "deploy",
     "!.env",
     "!**/.DS_Store"
   ],
@@ -74,6 +78,7 @@
     "@openzeppelin/contracts": "4.7.2"
   },
   "devDependencies": {
+    "@0xged/hardhat-deploy": "0.11.5",
     "@codechecks/client": "0.1.12",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
@@ -123,5 +128,8 @@
     "tsconfig-paths": "4.0.0",
     "typechain": "8.1.0",
     "typescript": "4.7.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
