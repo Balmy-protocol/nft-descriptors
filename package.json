@@ -1,6 +1,6 @@
 {
   "name": "@mean-finance/nft-descriptors",
-  "version": "1.0.0-rc6",
+  "version": "1.0.0",
   "description": "A repository that contains all of Mean's NFT Descriptors",
   "keywords": [
     "ethereum",
