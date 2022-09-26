@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity >=0.8.7 <0.9.0;
 
-import '@mean-finance/dca-v2-core/contracts/interfaces/IDCAHub.sol';
+import '@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol';
 import 'base64-sol/base64.sol';
 import '../interfaces/IDCAHubPositionDescriptor.sol';
 import '../libraries/DescriptorUtils.sol';
@@ -31,7 +31,7 @@ contract DCAHubPositionDescriptor is IDCAHubPositionDescriptor {
 
   /// @inheritdoc IDCAHubPositionDescriptor
   function tokenURI(address _hub, uint256 _tokenId) external view returns (string memory) {
-    IDCAHub.UserPosition memory _userPosition = IDCAHub(_hub).userPosition(_tokenId);
+    IDCAPositionGetter.UserPosition memory _userPosition = IDCAPositionGetter(_hub).userPosition(_tokenId);
 
     return
       _constructTokenURI(
@@ -247,4 +247,33 @@ contract DCAHubPositionDescriptor is IDCAHubPositionDescriptor {
   ) private pure returns (string memory) {
     return string(abi.encodePacked(DescriptorUtils.fixedPointToDecimalString(_amount, _decimals), ' ', _symbol));
   }
+}
+
+interface IDCAPositionGetter {
+  /// @notice The position of a certain user
+  struct UserPosition {
+    // The token that the user deposited and will be swapped in exchange for "to"
+    IERC20Metadata from;
+    // The token that the user will get in exchange for their "from" tokens in each swap
+    IERC20Metadata to;
+    // How frequently the position's swaps should be executed
+    uint32 swapInterval;
+    // How many swaps were executed since deposit, last modification, or last withdraw
+    uint32 swapsExecuted;
+    // How many "to" tokens can currently be withdrawn
+    uint256 swapped;
+    // How many swaps left the position has to execute
+    uint32 swapsLeft;
+    // How many "from" tokens there are left to swap
+    uint256 remaining;
+    // How many "from" tokens need to be traded in each swap
+    uint120 rate;
+  }
+
+  /**
+   * @notice Returns a user position
+   * @param positionId The id of the position
+   * @return The position itself
+   */
+  function userPosition(uint256 positionId) external view returns (UserPosition memory);
 }

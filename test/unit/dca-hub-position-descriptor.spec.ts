@@ -1,6 +1,6 @@
 import { utils } from 'ethers';
 import { ethers } from 'hardhat';
-import { IDCAHub, DCAHubPositionDescriptor, DCAHubPositionDescriptor__factory, IERC20Metadata } from '@typechained';
+import { IDCAPositionGetter, DCAHubPositionDescriptor, DCAHubPositionDescriptor__factory, IERC20Metadata } from '@typechained';
 import isSvg from 'is-svg';
 import chai, { expect } from 'chai';
 import { FakeContract, smock } from '@defi-wonderland/smock';
@@ -10,14 +10,14 @@ chai.use(smock.matchers);
 
 describe('DCAHubPositionDescriptor', () => {
   let fromToken: FakeContract<IERC20Metadata>, toToken: FakeContract<IERC20Metadata>;
-  let hub: FakeContract<IDCAHub>;
+  let hub: FakeContract<IDCAPositionGetter>;
   let DCAHubPositionDescriptor: DCAHubPositionDescriptor;
   const SWAP_INTERVAL = 60 * 60 * 24; // 1 day
 
   before('Setup accounts and contracts', async () => {
     fromToken = await smock.fake('IERC20Metadata');
     toToken = await smock.fake('IERC20Metadata');
-    hub = await smock.fake('IDCAHub');
+    hub = await smock.fake('IDCAPositionGetter');
     const factory = (await ethers.getContractFactory('DCAHubPositionDescriptor')) as DCAHubPositionDescriptor__factory;
     DCAHubPositionDescriptor = await factory.deploy();
 
