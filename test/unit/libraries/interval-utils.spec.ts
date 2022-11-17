@@ -35,7 +35,7 @@ describe('IntervalUtils', () => {
   describe('intervalToDescription', () => {
     when('calling intervalToDescription with an invalid interval', () => {
       then('reverts with message', async () => {
-        await expect(intervalUtils.intervalToDescription(0)).to.have.revertedWithCustomError(intervalUtils, 'InvalidInterval');
+        await expect(intervalUtils.intervalToDescription(0)).to.have.revertedWith('InvalidInterval');
       });
     });
 

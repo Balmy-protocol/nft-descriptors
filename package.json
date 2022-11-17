@@ -63,7 +63,7 @@
   },
   "lint-staged": {
     "*.{js,css,md,ts,sol,json}": "prettier --write",
-    "*.sol": "cross-env solhint --fix 'contracts/**/*.sol' 'interfaces/**/*.sol'",
+    "*.sol": "cross-env solhint --fix 'solidity/**/*.sol'",
     "package.json": "sort-package-json"
   },
   "resolutions": {
@@ -105,6 +105,7 @@
     "hardhat-gas-reporter": "1.0.8",
     "hardhat-preprocessor": "0.1.4",
     "husky": "7.0.4",
+    "is-svg": "4.3.2",
     "lint-staged": "12.4.1",
     "lodash": "4.17.21",
     "mocha": "10.0.0",
