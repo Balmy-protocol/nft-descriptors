@@ -1,7 +1,13 @@
 import 'dotenv/config';
-import '@nomicfoundation/hardhat-toolbox';
+import '@nomiclabs/hardhat-waffle';
+import '@nomiclabs/hardhat-ethers';
+import '@nomiclabs/hardhat-etherscan';
+import '@typechain/hardhat';
+import '@typechain/hardhat/dist/type-extensions';
 import { removeConsoleLog } from 'hardhat-preprocessor';
-import 'hardhat-deploy';
+import 'hardhat-gas-reporter';
+import '@0xged/hardhat-deploy';
+import 'solidity-coverage';
 import { HardhatUserConfig, MultiSolcUserConfig, NetworksUserConfig } from 'hardhat/types';
 import * as env from './utils/env';
 import 'tsconfig-paths/register';
