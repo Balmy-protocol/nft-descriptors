@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity >=0.8.7 <0.9.0;
 
-import '@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol';
+import '@openzeppelin/contracts-4.7.3/token/ERC20/extensions/IERC20Metadata.sol';
 import 'base64-sol/base64.sol';
 import '../interfaces/IDCAHubPositionDescriptor.sol';
 import '../libraries/DescriptorUtils.sol';

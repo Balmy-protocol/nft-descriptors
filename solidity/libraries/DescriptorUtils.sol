@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity >=0.8.0;
 
-import '@openzeppelin/contracts/utils/Strings.sol';
+import '@openzeppelin/contracts-4.7.3/utils/Strings.sol';
 
 // Based on Uniswap's NFTDescriptor
 library DescriptorUtils {
