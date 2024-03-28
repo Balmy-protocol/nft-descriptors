@@ -74,7 +74,7 @@
   "dependencies": {
     "@0xged/hardhat-deploy": "0.11.5",
     "@mean-finance/deterministic-factory": "1.10.0",
-    "@openzeppelin/contracts": "4.7.3",
+    "@openzeppelin/contracts": "4.8.0",
     "base64-sol": "1.0.1"
   },
   "devDependencies": {
