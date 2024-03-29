@@ -11,9 +11,9 @@ contract DCAHubPositionDescriptorFixed is IDCAHubPositionDescriptor, Ownable2Ste
 
   string public baseURL;
 
-  constructor(address firstOwner) {
-    baseURL = 'https://api.balmy.xyz/v2/dca/metadata/';
-    super.transferOwnership(firstOwner);
+  constructor(string memory _baseURL, address _firstOwner) {
+    baseURL = _baseURL;
+    super._transferOwnership(_firstOwner);
   }
 
   /// @inheritdoc IDCAHubPositionDescriptor
@@ -21,7 +21,7 @@ contract DCAHubPositionDescriptorFixed is IDCAHubPositionDescriptor, Ownable2Ste
     return string(abi.encodePacked(baseURL, block.chainid.toString(), '-', DescriptorUtils.addressToString(_hub), '-', _tokenId.toString()));
   }
 
-  function setBaseURL(string memory newBaseURL) external onlyOwner {
-    baseURL = newBaseURL;
+  function setBaseURL(string memory _newBaseURL) external onlyOwner {
+    baseURL = _newBaseURL;
   }
 }
