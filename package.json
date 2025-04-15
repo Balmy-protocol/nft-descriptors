@@ -1,7 +1,7 @@
 {
-  "name": "@mean-finance/nft-descriptors",
+  "name": "@balmy/nft-descriptors",
   "version": "1.2.0",
-  "description": "A repository that contains all of Mean's NFT Descriptors",
+  "description": "A repository that contains all of Balmy's NFT Descriptors",
   "keywords": [
     "ethereum",
     "smart",
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mean-Finance/nft-descriptors.git"
+    "url": "git+https://github.com/Balmy-Protocol/nft-descriptors.git"
   },
   "license": "GPL-3.0",
   "contributors": [
@@ -81,7 +81,7 @@
     "@codechecks/client": "0.1.12",
     "@commitlint/cli": "16.2.4",
     "@commitlint/config-conventional": "16.2.4",
-    "@defi-wonderland/smock": "2.2.0",
+    "@defi-wonderland/smock": "2.4.0",
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@0.3.0-beta.13",
     "@nomiclabs/hardhat-etherscan": "3.0.3",
     "@nomiclabs/hardhat-waffle": "2.0.3",
@@ -101,7 +101,7 @@
     "dotenv": "16.0.0",
     "ethereum-waffle": "3.4.4",
     "ethers": "5.6.5",
-    "hardhat": "2.9.3",
+    "hardhat": "2.23.0",
     "hardhat-gas-reporter": "1.0.8",
     "hardhat-preprocessor": "0.1.4",
     "husky": "7.0.4",

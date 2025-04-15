@@ -73,7 +73,7 @@ contract DCAHubPositionDescriptor is IDCAHubPositionDescriptor {
   function _generateDescription(PositionParams memory _params) private pure returns (string memory) {
     string memory _part1 = string(
       abi.encodePacked(
-        'This NFT represents a DCA position in Mean Finance, where ',
+        'This NFT represents a DCA position in Balmy, where ',
         _params.fromSymbol,
         ' will be swapped for ',
         _params.toSymbol,
@@ -101,7 +101,7 @@ contract DCAHubPositionDescriptor is IDCAHubPositionDescriptor {
   }
 
   function _generateName(PositionParams memory _params) private pure returns (string memory) {
-    return string(abi.encodePacked('Mean Finance DCA - ', _params.swapInterval, ' - ', _params.fromSymbol, unicode' ➔ ', _params.toSymbol));
+    return string(abi.encodePacked('Balmy DCA - ', _params.swapInterval, ' - ', _params.fromSymbol, unicode' ➔ ', _params.toSymbol));
   }
 
   function _generateSVG(PositionParams memory _params) internal pure returns (string memory) {

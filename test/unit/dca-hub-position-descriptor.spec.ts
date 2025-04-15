@@ -61,11 +61,11 @@ describe('DCAHubPositionDescriptor', () => {
         ({ name, description, image } = await getPositionURI());
       });
       then('name is as expected', () => {
-        expect(name).to.equal('Mean Finance DCA - Daily - TKNA ➔ TKNB');
+        expect(name).to.equal('Balmy DCA - Daily - TKNA ➔ TKNB');
       });
       then('description is as expected', () => {
         expect(description).to.equal(
-          `This NFT represents a DCA position in Mean Finance, where TKNA will be swapped for TKNB. The owner of this NFT can modify or redeem the position.\n\nTKNA Address: ${fromToken.address.toLowerCase()}\nTKNB Address: ${toToken.address.toLowerCase()}\nSwap interval: Daily\nToken ID: 1\n\n⚠️ DISCLAIMER: Due diligence is imperative when assessing this NFT. Make sure token addresses match the expected tokens, as token symbols may be imitated.`
+          `This NFT represents a DCA position in Balmy, where TKNA will be swapped for TKNB. The owner of this NFT can modify or redeem the position.\n\nTKNA Address: ${fromToken.address.toLowerCase()}\nTKNB Address: ${toToken.address.toLowerCase()}\nSwap interval: Daily\nToken ID: 1\n\n⚠️ DISCLAIMER: Due diligence is imperative when assessing this NFT. Make sure token addresses match the expected tokens, as token symbols may be imitated.`
         );
       });
       then('svg is valid', () => {

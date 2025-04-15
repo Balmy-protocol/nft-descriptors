@@ -1,8 +1,8 @@
-[![Lint](https://github.com/Mean-Finance/nft-descriptors/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/Mean-Finance/nft-descriptors/actions/workflows/lint.yml)
-[![Tests](https://github.com/Mean-Finance/nft-descriptors/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/Mean-Finance/nft-descriptors/actions/workflows/tests.yml)
-[![Slither Analysis](https://github.com/Mean-Finance/nft-descriptors/actions/workflows/slither.yml/badge.svg?branch=main)](https://github.com/Mean-Finance/nft-descriptors/actions/workflows/slither.yml)
+[![Lint](https://github.com/Balmy-Protocol/nft-descriptors/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/Balmy-Protocol/nft-descriptors/actions/workflows/lint.yml)
+[![Tests](https://github.com/Balmy-Protocol/nft-descriptors/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/Balmy-Protocol/nft-descriptors/actions/workflows/tests.yml)
+[![Slither Analysis](https://github.com/Balmy-Protocol/nft-descriptors/actions/workflows/slither.yml/badge.svg?branch=main)](https://github.com/Balmy-Protocol/nft-descriptors/actions/workflows/slither.yml)
 
-# Mean Finance NFT Descriptors
+# Balmy NFT Descriptors
 
 This repository holds Mean's NFT Descriptors. These are contracts that will generate an SVG completely on-chain, to describe the current state of an NFT.
 
@@ -10,9 +10,9 @@ This repository holds Mean's NFT Descriptors. These are contracts that will gene
 
 The package will contain:
 
-- Artifacts can be found under `@mean-finance/nft-descriptors/artifacts`
-- Compatible deployments for [hardhat-deploy](https://github.com/wighawag/hardhat-deploy) plugin under the `@mean-finance/nft-descriptors/deployments` folder.
-- Typescript smart contract typings under `@mean-finance/nft-descriptors/typechained`
+- Artifacts can be found under `@balmy/nft-descriptors/artifacts`
+- Compatible deployments for [hardhat-deploy](https://github.com/wighawag/hardhat-deploy) plugin under the `@balmy/nft-descriptors/deployments` folder.
+- Typescript smart contract typings under `@balmy/nft-descriptors/typechained`
 
 ## Documentation
 
@@ -25,11 +25,11 @@ To install with [**Hardhat**](https://github.com/nomiclabs/hardhat) or [**Truffl
 #### YARN
 
 ```sh
-yarn add @mean-finance/nft-descriptors
+yarn add @balmy/nft-descriptors
 ```
 
 ### NPM
 
 ```sh
-npm install @mean-finance/nft-descriptors
+npm install @balmy/nft-descriptors
 ```
